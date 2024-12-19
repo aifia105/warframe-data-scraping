@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
-// Get the directory path of the current module
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -113,7 +113,7 @@ const frameWikiScraping = async () => {
             }
         }
 
-        // Save to a file with proper path resolution
+        // Save to a JSON file 
         const fs = await import('fs/promises');
         const outputPath = join(__dirname, 'warframes-data.json');
         await fs.writeFile(
